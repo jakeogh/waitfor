@@ -2,8 +2,6 @@
 
 https://github.com/jakeogh/waitfor
 
-Wait for a command to exit 0.
-
 **Use:**
 
 simple example (wait for the net to be available, then do something):
