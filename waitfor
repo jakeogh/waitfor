@@ -14,16 +14,18 @@ shift
 command="${1}"
 shift
 
-if [ "$#" == 3 ];
+if [ "$#" -eq 3 ];
 then
     desired_exit_status="${1}"
     shift
+else
+    desired_exit_status=0
 fi
 
 while `/bin/true`;
 do
     ${command}
-    if [ "$?" == 0 ];
+    if [ "$?" -eq $desired_exit_status ];
     then
         exit 0
     fi
