@@ -2,17 +2,27 @@
 # waitfor - Wait for a command to exit 0.
 # https://github.com/jakeogh/waitfor
 
-argcount=2
-usage="interval command"
-test "$#" -ge "${argcount}" || { echo "$0 ${usage}" > /dev/stderr && exit 1 ; }
+min_argcount=2
+max_argcount=3
+usage="interval command [exit_status]"
+test "$#" -le "${min_argcount}" || { echo "$0 ${usage}" > /dev/stderr && exit 1 ; }
+test "$#" -ge "${max_argcount}" || { echo "$0 ${usage}" > /dev/stderr && exit 1 ; }
 
 set -o nounset
 sleep="${1}"
 shift
+command="${1}"
+shift
+
+if [ "$#" == 3 ];
+then
+    desired_exit_status="${1}"
+    shift
+fi
 
 while `/bin/true`;
 do
-    ${@}
+    ${command}
     if [ "$?" == 0 ];
     then
         exit 0
