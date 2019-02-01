@@ -4,7 +4,12 @@ https://github.com/jakeogh/waitfor
 
 Wait for a command to exit 0.
 
-Requires: sh
+**Use:**
+
+simple example (wait for the net to be available, then do something):
+```
+$ waitfor 2 "ping -c1 1.1.1.1" && wget http://www.wrh.noaa.gov/images/twc/granalyst/kemx_cr_0.jpg
+```
 
 **Theory:**
 
@@ -28,10 +33,4 @@ Place in $PATH
    emerge waitfor
 ```
 
-**Use:**
-
-simple example (wait for the net to be available, then do something):
-```
-$ waitfor 2 "ping -c1 1.1.1.1" && wget http://www.wrh.noaa.gov/images/twc/granalyst/kemx_cr_0.jpg
-```
 
