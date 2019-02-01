@@ -1,4 +1,4 @@
-**waitfor - Atomic locking for commands**
+**waitfor - Run command over until it exits 0.**
 
 https://github.com/jakeogh/waitfor
 
