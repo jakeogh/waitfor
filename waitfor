@@ -1,0 +1,21 @@
+#!/bin/sh
+# waitfor - Wait for a command to exit 0.
+# https://github.com/jakeogh/waitfor
+
+argcount=2
+usage="interval_in_seconds command"
+test "$#" -ge "${argcount}" || { echo "$0 ${usage}" > /dev/stderr && exit 1 ; }
+
+set -o nounset
+sleep="${1}"
+shift
+
+while `/bin/true`;
+do
+    ${@}
+    if [ "$?" == 0 ];
+    then
+        exit 0
+    fi
+    sleep "${sleep}" || exit 1
+done
