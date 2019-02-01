@@ -3,7 +3,7 @@
 # https://github.com/jakeogh/waitfor
 
 argcount=2
-usage="interval_in_seconds command"
+usage="interval command"
 test "$#" -ge "${argcount}" || { echo "$0 ${usage}" > /dev/stderr && exit 1 ; }
 
 set -o nounset
