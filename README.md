@@ -4,7 +4,6 @@ https://github.com/jakeogh/waitfor
 
 **Use:**
 
-Example:
 ```
 $ waitfor
 waitfor interval command [exit_status]
