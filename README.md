@@ -6,6 +6,9 @@ https://github.com/jakeogh/waitfor
 
 simple example (wait for the net to be available, then do something):
 ```
+$ waitfor
+waitfor interval command [exit_status]
+
 $ waitfor 2 "ping -c1 1.1.1.1" && wget http://www.wrh.noaa.gov/images/twc/granalyst/kemx_cr_0.jpg
 ```
 
