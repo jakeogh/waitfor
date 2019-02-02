@@ -14,7 +14,7 @@ shift
 command="${1}"
 shift
 
-if [ "$#" -eq 3 ];
+if [ $# -eq 1 ];
 then
     desired_exit_status="${1}"
     shift
@@ -25,7 +25,7 @@ fi
 while `/bin/true`;
 do
     ${command}
-    if [ "$?" -eq $desired_exit_status ];
+    if [ $? -eq $desired_exit_status ];
     then
         exit 0
     fi
