@@ -1,15 +1,19 @@
-**waitfor - Run command over until it exits 0.**
+**waitfor - Re-run command until it exits 0.**
 
 https://github.com/jakeogh/waitfor
 
 **Use:**
 
-simple example (wait for the net to be available, then do something):
+Example:
 ```
 $ waitfor
 waitfor interval command [exit_status]
 
+$ # wait for the net to be available
 $ waitfor 2 "ping -c1 1.1.1.1" && wget http://www.wrh.noaa.gov/images/twc/granalyst/kemx_cr_0.jpg
+
+$ # wait until eth0 is plugged into a net with 192.168.0.1 listening on it
+$ waitfor 2 'arping -b -c1 -w1 -I eth0 -D 192.168.0.1' 1 && mount /mnt/nfs
 ```
 
 **Theory:**

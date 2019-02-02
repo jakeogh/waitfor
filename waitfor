@@ -1,5 +1,5 @@
 #!/bin/sh
-# waitfor - Wait for a command to exit 0.
+# waitfor - Run command over and over until it exits 0.
 # https://github.com/jakeogh/waitfor
 
 min_argcount=2
