@@ -1,4 +1,4 @@
-**waitfor - Re-run command until it exits 0.**
+**waitfor - Re-run command until it exits with the desired exit status (0 by default).**
 
 https://github.com/jakeogh/waitfor
 
@@ -18,7 +18,7 @@ $ waitfor 2 'arping -b -c1 -w1 -I eth0 -D 192.168.0.1' 1 && mount /mnt/nfs
 
 **Theory:**
 
- 1. Run command, if command exits 0, then exit 0. If it does not, wait the specified interval (in seconds) and try again.
+ 1. Run command, if command exits as desired, then exit 0. If it does not, wait the specified interval (in seconds) and try again.
 
 **General Install:**
 
