@@ -1,5 +1,5 @@
 #!/bin/sh
-# waitfor - Run command over and over until it exits with the desired exit status (0 by default).
+# waitfor - Run command over and over until it exits with the desired exit status (0 by default) or [tries] is reached.
 # https://github.com/jakeogh/waitfor
 
 min_argcount=2
@@ -31,7 +31,7 @@ else
 fi
 
 loops=0
-while `/bin/true`;
+while :
 do
     ${command}
     if [ $? -eq $desired_exit_status ];
