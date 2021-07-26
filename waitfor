@@ -1,5 +1,6 @@
 #!/bin/sh
 # waitfor - Run command over and over until it exits with the desired exit status (0 by default) or [tries] is reached.
+# waitfor - Repeat a command until it exits with the desired exit status (0 by default) or [tries] is reached.
 # https://github.com/jakeogh/waitfor
 
 min_argcount=2
